@@ -1,5 +1,12 @@
+import os
+import swell as sw
+import yaml
+
 def main():
-	print('Hello World!')
+	swell = sw.Swell(os.environ['DATASRC'])
+	extractor = sw.SwellExtractor()
+
+	print(extractor.extract(swell, 'tf-idf'))
 
 if __name__ == '__main__':
 	main()
